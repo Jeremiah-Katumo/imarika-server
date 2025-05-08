@@ -12,7 +12,8 @@ class Token(BaseModel):
     token_type: str
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
 
 
 class TokenData(BaseModel):
@@ -20,7 +21,8 @@ class TokenData(BaseModel):
     # id: int | None = None
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
 
 
 class UserBase(BaseModel):
@@ -31,17 +33,18 @@ class UserBase(BaseModel):
     is_superuser: bool = False
 
     # class Config:
-    #     orm_mode = True
+    #     from_attributes = True
 
 
 class UserInDB(UserBase):
     hashed_password: str
 
     # class Config:
-    #     orm_mode = True
+    #     from_attributes = True
 
 class User(UserBase):
     id: int 
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True

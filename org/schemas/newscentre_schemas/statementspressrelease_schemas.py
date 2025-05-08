@@ -28,7 +28,7 @@ class FileCreate(FileBase):
     downloadFile_data: bytes
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
     # @validator('downloadFile_data')
     # def check_file_size(cls, value):
@@ -47,7 +47,7 @@ class File(FileBase):
     downloadFile_data: bytes
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class FileUpdate(BaseModel):
     downloadFile_id: int

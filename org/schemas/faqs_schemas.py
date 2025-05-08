@@ -18,7 +18,8 @@ class FAQsIn(Faq):
     org_id: int
     
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
     
 class FAQsOut(Faq):
     id: int
@@ -27,4 +28,5 @@ class FAQsOut(Faq):
     org_id: int
     
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True

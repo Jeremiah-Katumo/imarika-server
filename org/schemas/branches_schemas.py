@@ -29,5 +29,6 @@ class Branch(BranchBase):
     branch_directions: str
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
         

@@ -21,4 +21,4 @@ class Department(DepartmentBase):
     department_image: Union[str, None] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True

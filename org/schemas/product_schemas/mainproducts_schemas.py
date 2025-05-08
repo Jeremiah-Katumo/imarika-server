@@ -44,7 +44,8 @@ class ProductCreate(ProductBase):
     productSub_category: str
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
 
 
 class Product(ProductBase):
@@ -55,4 +56,5 @@ class Product(ProductBase):
     productSub_category: str
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True

@@ -8,18 +8,18 @@ class ImageCreate(ImageBase):
     # filename: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ImageUpdate(ImageBase):
     id: int
     filename: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class ImageOut(ImageBase):
     id: int
     filename: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True

@@ -28,7 +28,8 @@ class OrgIn(BaseModel):
     core_values: Union[List[str], None] = None
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
 
 class OrgOut(OrgIn):
     id: int
@@ -42,7 +43,8 @@ class OrgOut(OrgIn):
     org_status: Union[str, None] = 'active'
 
     class Config:
-        orm_mode=True
+        # orm_mode=True
+        from_attributes = True
 
 # class OrgCreateError(BaseModel):
 #     message: str

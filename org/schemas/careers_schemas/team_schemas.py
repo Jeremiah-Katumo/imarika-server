@@ -40,7 +40,7 @@ class TeamMember(TeamMemberBase):
     profile_picture: Union[str, None] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
     
 # class Team(BaseModel):

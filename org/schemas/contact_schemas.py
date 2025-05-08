@@ -23,8 +23,8 @@ class ContactMessageIn(ContactMessageBase):
     message: str
 
     class Config:
-        orm_mode=True
-
+        # orm_mode=True
+        from_attributes = True
 
 class ContactMessageOut(ContactMessageBase):
     id: int
@@ -34,5 +34,5 @@ class ContactMessageOut(ContactMessageBase):
     message: str
 
     class Config:
-        orm_mode = True
+        from_attributes = True
     

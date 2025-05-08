@@ -29,7 +29,7 @@ class FileCreate(BaseModel):
 #     filename: str
 
 #     class Config:
-#         orm_mode = True
+#         from_attributes = True
 
 class VacancyBase(BaseModel):
     # vacancyApplication_id: int
@@ -52,7 +52,8 @@ class VacancyApplication(VacancyBase):
     vacancyApplication_files: List[FileCreate]
 
     class Config:
-        orm_mode = True
+        # from_attributes = True
+        from_attributes = True
 
 class VacancyApplicationUpdate(VacancyBase):
     vacancy_id: int
